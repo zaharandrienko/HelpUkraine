@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <ul>
+        <li id="ind-ua" onclick="ChangeLanguage('ua')">UA</li>
+        <li id="ind-en" onclick="ChangeLanguage('en')">EN</li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+    <h1 class="lang-title">Переклад</h1>
+    <h1 class="lang-title2">Переклад</h1>
+
+    <script src="./text.js"></script>
+    <script>
+        const ua = document.querySelector('#ind-ua');
+        const en = document.querySelector('#ind-en');
+        const allLang = ['en', 'ua'];
+        ChangeHash();
+
+
+        function ChangeLanguage(x){
+            location.href = window.location.pathname + '#'+x;
+            location.reload();
+        }
+
+        function ChangeHash(){
+            let hash = window.location.hash;
+            hash = hash.substr(1);
+            console.log(hash)
+            if(!allLang.includes(hash)){
+                location.href = window.location.pathname + '#en';
+                location.reload();
+            }
+
+            // document.querySelector('.lang-title').innerHTML = textArr['title'][hash]
+            for(let key in textArr)(
+                document.querySelector('.lang-'+key).innerHTML = textArr[key][hash]
+            )
+        }
+
+    </script>
+</body>
+</html>
