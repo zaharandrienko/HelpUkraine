@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelpUkraine - CF</title>
-    <link rel="icon" href="./assets/BACK.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="./style.css">
     <script src="./main.js"></script>
     <script src="./text.js"></script>
@@ -15,27 +18,69 @@
 <body>
 
     <header>
-        <div href="#" class="networks">
-            <p class="network" id="ind-ua" onclick="ChangeLanguage('ua')">UA</p>
-            <p class="network" id="ind-en" onclick="ChangeLanguage('en')">EN</p>
+        <a href="#"><img class="logo" src="./assets/logo.png"></a>
+        <div href="#" class="languages">
+            <p class="language" id="ind-ua" onclick="ChangeLanguage('ua')">UA</p>
+            <p class="language" id="ind-en" onclick="ChangeLanguage('en')">EN</p>
         </div>
         <nav>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#katalog">Каталог</a></li>
-            <li><a href="#otziv">Фото</a></li>
-            <li><a href="#zakaz">Заказать</a></li>
+            <li class="linePush1"><a href="#main">Головна</a></li>
+            <li class="linePush2"><a href="#">Напрямки</a></li>
+            <li class="linePush3"><a href="#">Результати</a></li>
+            <li class="linePush4"><a href="#">Про нас</a></li>
+            <li class="linePush5"><a href="#">Партнери</a></li>
+            <li class="linePush6"><a href="#">Донат</a></li>
+            <div class="line"></div>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="background-image" style="background-image: url(assets/BACK.jpg);"></div>
-        <h1 class="lang-title">Переклад</h1>
-        <h3 class="lang-title2">Переклад2</h3>
-        <a href="#zakaz" class="btn">-.-.-.-.-</a>
+    <section class="main" id="main">
+        <div class="main-title">
+            <h1>Help</h1>
+            <h1 class="ukraine">Ukraine&nbsp</h1>
+            <h1>- CF</h1>
+            <button>Донат</button>    
+        </div>
+        <hr>
+        <div class="main-text">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <p>«Береженого Бог береже, а козаків —волонтери» — саме під цим гаслом вирішили об’єднатися у Спільноту Незалежних Волонтерів</p>
+            <p>Help Ukraine — це спільнота незалежних, вправних і патріотично налаштованих людей. Коли наша Україна в вогні не можемо стояти осторонь.  </p>
+        </div>
+        <div class="main-photo">
+            <div class="textContainer">
+                <h1>305.600/</h1>
+                <h3>700.000 грн зібрано</h3>
+            </div>
+            <p>#700.000 грн на найкращі дрони для бійців з гарячих точок України</p>
+        </div>
     </section>
 
+    <section class="ways">
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="cursor"></div>
+    <div class="cursor2"></div> -->
     <script>
         ChangeHash();
+
+        // var cursor = document.querySelector(".cursor");
+        // var cursor2 = document.querySelector(".cursor2");
+
+        // document.addEventListener("mousemove",function(e){
+        //     cursor.style.cssText = cursor2.style.cssText =  "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        // });
+
     </script>
 </body>
 

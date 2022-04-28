@@ -1,7 +1,7 @@
 const textArr = {
     'title' : {
-        'ua' : 'Переклад',
-        'en' : 'Translation',
+        'ua' : 'HelpUkraine - CF',
+        'en' : 'HelpUkraine - CF',
     },
     'title2' : {
         'ua' : 'Переклад2',
