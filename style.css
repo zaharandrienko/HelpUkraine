@@ -32,7 +32,8 @@ a:hover{
 }
 
 section{
-	padding: 0px 100px;
+	width: 1200px;
+	margin: 0px auto;
 }
 
 /* .cursor{
@@ -102,12 +103,12 @@ header:hover ~ .cursor2{
 -------------*/
 
 header{
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	left: 0;
 	z-index: 10;
-	width: 100%;
-	padding: 0px 100px;
+	width: 1200px;
+	margin: 0 auto;
 	background-color: #00000000;
 	transition: all 0.5s;
 }
@@ -280,9 +281,8 @@ header nav li:last-child{
 .main{
 	position: relative;
 	min-height: 100vh;
-	width: 100%;
 	letter-spacing: 1px;
-	padding-top: 195px;
+	padding-top: 120px;
 }
 
 .main-title{
@@ -337,7 +337,7 @@ header nav li:last-child{
 	font-size: 16px;
 	width: 355px;
 	float: right;
-	margin-right: 40px;
+	margin-right: 15px;
 }
 .main-photo{
 	max-width: 100%;
