@@ -213,14 +213,14 @@ nav li{
 	padding: 0px 0px;
 	font-size: 14px;
 	color: #858585;
-	border-bottom: 1px #ffffff solid;
-	transition: 50ms;
+	border-bottom: 1px #17171700 solid;
+	transition: 150ms;
 }
 
 nav li:hover{
 	color: #171717;
-	border-bottom: 1px #171717 solid;
-	transition: 50ms;
+	border-bottom: 1px #171717fa solid;
+	transition: 150ms;
 }
 
 header nav li:first-child{
@@ -323,21 +323,32 @@ header nav li:last-child{
 	width: 100%;
 	height: 172px;
 	margin-top: 15px;
-	color: #464646;
 	letter-spacing: 0.1px;
 }
 .main-text span{
 	font-size: 14px;
 	margin-right: 28px;
 	padding-bottom: 1px;
-	border-bottom: 1px #464646 solid;
+	border-bottom: 1px #464646fd solid;
+	color: #464646;
 	cursor: pointer;
+	transition: all 150ms;
+}
+.main-text span:hover{
+	font-size: 14px;
+	margin-right: 28px;
+	padding-bottom: 1px;
+	border-bottom: 1px #46464600 solid;
+	color: #858585;
+	cursor: pointer;
+	transition: all 150ms;
 }
 .main-text p{
 	font-size: 16px;
 	width: 355px;
 	float: right;
 	margin-right: 15px;
+	color: #464646;
 }
 .main-photo{
 	max-width: 100%;
@@ -390,9 +401,66 @@ header nav li:last-child{
 ----------------*/
 
 .ways{
-	position: relative;
-	min-height: 100vh;
+	min-height: 1600px;
+	height: fit-content;
+	padding-top: 190px;
+}
+
+.container-title{
+	width: 400px;
+	height: 100%;
+	float: left;
+}
+.container-title h1{
+	font-size: 39px;
+	font-weight: 400;
+}
+.container-content{
+	width: 740px;
+	height: 100%;
+	margin-left: 60px;
+	float: left;
+}
+.container-content p{
+	font-size: 18px;
+}
+.list{
 	width: 100%;
-	letter-spacing: 1px;
-	padding-top: 195px;
+	display: grid;
+	grid-template-columns:  1fr 1fr;
+	column-gap: 10px;
+}
+.list-item{
+	margin-top: 89px;
+	min-height: 340px;
+}
+.list-item-img{
+	width: 365px;
+	height: 260px;
+	background-size: cover;
+	background-position: center;
+}
+.list-item h3{
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 15px;
+	color: #171717;
+}
+.list-item p{
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 5px;
+	color: #858585;
+}
+
+
+
+/*----------------
+ 	About Section
+----------------*/
+
+.about{
+	min-height: 900px;
+	height: fit-content;
+	padding-top: 190px;
 }
