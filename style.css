@@ -13,7 +13,9 @@ html{
 	font-family: 'Inter', sans-serif;
 	color: #171717;
 	scroll-behavior: smooth;
+	line-height: 1.2;
 }
+
 
 ul, nav{
 	list-style: none;
@@ -23,19 +25,35 @@ a{
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
-	transition: all 0.4s;
 }
 
-
-a:hover{
-	transition: all 0.4s;
-}
 
 section{
 	width: 1200px;
 	margin: 0px auto;
+	min-height: 80px;
+	position: relative;
 }
 
+.lamp{
+	position: absolute;
+	z-index: -1;
+}
+#lamp1{
+	width: 616px;
+	top: 0;
+	right: 0;
+}
+#lamp2{
+	width: 594px;
+	top: 0px;
+	left: -16%;
+}
+#lamp3{
+	width: 594px;
+	right: 0;
+	margin-top: -200px;
+}
 /* .cursor{
 	position: fixed;
 	width: 50px;
@@ -66,8 +84,8 @@ header:hover ~ .cursor2{
 	width: 40px;
 	height: 40px;
 	background-color: rgba(0, 17, 255, 0.132);
-} */
-
+}
+ */
 
 @media (max-width: 1000px){
 
@@ -103,15 +121,18 @@ header:hover ~ .cursor2{
 -------------*/
 
 header{
-	/* position: fixed; */
+	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 10;
-	width: 1200px;
-	margin: 0 auto;
-	background-color: #00000000;
+	z-index: 1000;
+	width: 100%;
 	transition: all 0.5s;
 }
+
+.scroll{
+	background-color: #ffffff;
+}
+
 
 .fade-in{
 	padding: 0px 100px 0;
@@ -119,15 +140,7 @@ header{
 	transition: all 0.5s;
 }
 
-.logo{
-	width: 50px;
-	height: 50px;
-	margin-top: 20px;
-}
 
-header h2{
-	font-family: 'Montserrat', sans-serif;
-}
 
 header p{
 	float: right;
@@ -135,10 +148,17 @@ header p{
 }
 
 .languages{
-	float: right;
-	width: 160px;
-	height: 80px;
-	line-height: 80px;
+	display: flex;
+	align-items: center;
+	float: left;
+	transition: 200ms;
+	height: 78px;
+	z-index: 10000;
+}
+.scroll-languages{
+	margin-left: 66px;
+	transition: 200ms;
+	height: 78px;
 }
 
 .language{
@@ -146,6 +166,7 @@ header p{
 	cursor: pointer;
 	color: #858585;
 	transition: all 200ms;
+	z-index: 10000;
 }
 
 .language:hover{
@@ -155,6 +176,7 @@ header p{
 
 .active{
 	color: #0041E9;
+	font-weight: 500;
 }
 
 .active:hover{
@@ -163,10 +185,12 @@ header p{
 
 nav{
 	display: flex;
-	position: relative;
 	align-items: center;
+	position: relative;
 	float: right;
-	height: 80px;
+	width: 740px;
+	height: 78px;
+	z-index: 10000;
 }
 /* .line{
 	position: absolute;
@@ -209,18 +233,21 @@ nav{
 
 nav li{
 	float: right;
-	margin: 0 20px;
-	padding: 0px 0px;
+	margin: 0 auto;
 	font-size: 14px;
 	color: #858585;
 	border-bottom: 1px #17171700 solid;
-	transition: 150ms;
+	transition: 200ms;
 }
 
 nav li:hover{
 	color: #171717;
 	border-bottom: 1px #171717fa solid;
-	transition: 150ms;
+	transition: 200ms;
+}
+nav a:hover{
+	color: #171717;
+	transition: 200ms;
 }
 
 header nav li:first-child{
@@ -232,13 +259,13 @@ header nav li:last-child{
 	margin-right: 0;	
 	padding-right: 0;
 }
-
-
-
-.logo-img{
-	height: 80px;
-	width: 80px;
+.linePush6{
+	margin-right: 0;	
+	padding-right: 0;
 }
+
+
+
 
 
 @media (max-width: 1000px){
@@ -282,46 +309,94 @@ header nav li:last-child{
 	position: relative;
 	min-height: 100vh;
 	letter-spacing: 1px;
-	padding-top: 120px;
+	padding-top: 180px;
 }
 
 .main-title{
 	width: 100%;
 	height: 125px;
+	padding-left: 114px;
+}
+.logo{
+	position: absolute;
+	height: 94px;
+	width: 94px;
+	transition: 500ms;
+}
+.scroll-logo{
+	position: fixed;
+	width: 42px;
+	height: 42px;
+	top: 18px;
+	transition: 500ms;
+	z-index: 1000;
+}
+.main-title a{
+	float: left;
 }
 .main-title h1{
-	font-size: 100px;
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	font-size: 75px;
 	font-weight: 400;
-	margin: 0px;
+	margin: 20px 0;
 	padding: 0;
 	min-width: 200px;
 	float: left;
 }
 
+
 .ukraine{
-	font-style: italic;
+	color: #0D3EBC;
 }
 
-.main-title button{
+.donate-block{
 	float: right;
+	margin-top: 35px;
+}
+.donate-button{
 	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	border: none;
-	margin-top: 55px;
-	padding: 16px 96px;
-	background-color: #FFE500;
+	padding: 15px 96px;
+	border-radius: 24px;
+	background-color: #0D3EBC;
+	color: white;
+	cursor: pointer;
+	transition: 400ms;
+}
+.donate{
+	position: absolute;
+	display: none;
+	left: 215px;
+	top: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 10px;
+	font-weight: 500;
+	padding: 10px 55px;
+	border-radius: 23px;
+	background-color: #0042e900;
+	color: #0D3EBC;
+	border: 1px #0D3EBC solid;
+	z-index: 10000;
 	cursor: pointer;
 }
+
 
 .main hr{
 	display: block;
 	width: 100%;
-	margin-top: 34px;
+	margin-top: 0px;
+	border: 0px;
+	border-bottom: 1px #858585 solid;
+	opacity: 0.4;
 }
 
 .main-text{
 	width: 100%;
-	height: 172px;
+	height: 162px;
 	margin-top: 15px;
 	letter-spacing: 0.1px;
 }
@@ -345,9 +420,9 @@ header nav li:last-child{
 }
 .main-text p{
 	font-size: 16px;
-	width: 355px;
+	width: 330px;
 	float: right;
-	margin-right: 15px;
+	margin-right: 40px;
 	color: #464646;
 }
 .main-photo{
@@ -403,7 +478,7 @@ header nav li:last-child{
 .ways{
 	min-height: 1600px;
 	height: fit-content;
-	padding-top: 190px;
+	padding-top: 290px;
 }
 
 .container-title{
@@ -412,8 +487,16 @@ header nav li:last-child{
 	float: left;
 }
 .container-title h1{
-	font-size: 39px;
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	font-size: 30px;
 	font-weight: 400;
+}
+.container-title h5{
+	font-size: 14px;
+	font-weight: 400;
+	color: #464646;
+	width: 348px;
+	margin-top: 100px;
 }
 .container-content{
 	width: 740px;
@@ -441,16 +524,23 @@ header nav li:last-child{
 	background-position: center;
 }
 .list-item h3{
-	font-size: 18px;
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	font-size: 20px;
 	font-weight: 400;
 	margin-top: 15px;
-	color: #171717;
+	color: #0D3EBC;
 }
 .list-item p{
 	font-size: 16px;
 	font-weight: 400;
 	margin-top: 5px;
 	color: #858585;
+}
+
+.ways-button{
+	position: absolute;
+	right: 50px;
+	bottom: -50px;
 }
 
 
@@ -463,4 +553,201 @@ header nav li:last-child{
 	min-height: 900px;
 	height: fit-content;
 	padding-top: 190px;
+}
+.about-img{
+	width: 100%;
+	margin-top: 75px;
+}
+.documents{
+	width: 100%;
+	margin-top: 70px;
+}
+.document-text{
+	float: left;
+	width: 45%;
+}
+.documents h3{
+	width: 299px;
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #858585;
+	width: auto;
+	float: left;
+}
+.documents img{
+	width: 59px;
+	height: 81px;
+	display: block;
+	cursor: pointer;
+	float: left;
+	margin-right: 50px;
+}
+.documents hr{
+	width: 100%;
+	border: 0px;
+	border-bottom: 1px #858585 solid;
+	opacity: 0.4;
+	margin: 20px 0 0px 0;
+	float: left;
+}
+
+
+
+
+
+
+
+/*----------------
+ 	Result Section
+----------------*/
+
+.result{
+	padding-top: 290px;
+}
+.container-result{
+	width: 100%;
+	margin-top: 90px;
+}
+.container-result ul{
+	width: 100%;
+}
+.container-result li{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 40px 0;
+	font-size: 20px;
+	border-bottom: 1px rgb(210, 210, 210) solid;
+}
+
+.container-result li:first-child{
+	border-top: 1px rgb(210, 210, 210) solid;
+}
+
+.container-result p{
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	float: left;
+	color: #858585;
+}
+.result-title{
+	width: 340px;
+	text-align: left;
+}
+
+
+
+
+
+/*----------------
+ 	Alerts Section
+----------------*/
+
+.alerts{
+	padding-top: 190px;
+}
+.container-alert{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 60px;
+}
+.alert{
+	margin-top: 70px;
+}
+.alert img{
+	width: 570px;
+}
+.alert h3{
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	float: left;
+	width: 300px;
+	color: #0D3EBC;
+	margin-top: 30px;
+}
+.alert h5{
+	float: right;
+	width: auto;
+	font-size: 14px;
+	font-weight: 400;
+	color: #464646;
+	margin-top: 30px;
+}
+.alert p{
+	width: 100%;
+	float: left;
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 20px;
+}
+
+
+/*----------------
+ 	Form Section
+----------------*/
+
+
+.form{
+	padding-top: 190px;
+}
+
+.form h1{
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	width: 100%;
+	text-align: center;
+	font-size: 75px;
+	font-weight: 400;
+}
+.form h2{
+	font-family: 'Kharkiv Tone Regular', sans-serif;
+	float: right;
+	text-align: left;
+	font-size: 75px;
+	font-weight: 400;
+	width: 740px;
+}
+.form p{
+	width: 740px;
+	margin-top: 26px;
+	float: right;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+
+
+/*----------------
+ 	Footer
+----------------*/
+
+
+footer{
+	width: 100%;
+	height: 600px;
+	margin-top: 480px;
+	background-color: #0D3EBC;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.none{
+	background-color: #0d3fbc00;
+	color: #0042e900;
+	transition: 400ms;
+}
+.block{
+	display: block;
 }
