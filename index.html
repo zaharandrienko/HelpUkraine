@@ -12,6 +12,8 @@
         rel="stylesheet">
     <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./main.js"></script>
     <script src="./text.js"></script>
 </head>
@@ -19,12 +21,14 @@
 <body>
 
     <header>
-        <section>
+        <div class="container">
             <div href="#" class="languages">
                 <p class="language" id="ind-ua" onclick="ChangeLanguage('ua')">UA</p>
                 <p class="language" id="ind-en" onclick="ChangeLanguage('en')">EN</p>
             </div>
-            <button class="donate">Донат</button>
+            <a href="#Form">
+                <button class="donate">Донат</button>
+            </a>
             <nav>
                 <li class="linePush1"><a href="#main">Головна</a></li>
                 <li class="linePush2"><a href="#">Про нас</a></li>
@@ -34,178 +38,214 @@
                 <li class="linePush6"><a href="#">Актуальне</a></li>
                 <div class="line"></div>
             </nav>
-            <section>
+        </div>
     </header>
 
 
 
     <section class="main" id="main">
-        <a href="#"><img class="logo" src="./assets/logo.png"></a>
-        <div class="main-title">
-            <h1 class="help">Help</h1>
-            <h1 class="ukraine">Ukraine&nbsp</h1>
-            <h1>- CF</h1>
-            <button class="donate-block donate-button">Донат</button>
-        </div>
-        <hr>
-        <div class="main-text">
-            <span>Instagram</span>
-            <span>Facebook</span>
-            <p>«Береженого Бог береже, а козаків —волонтери» — саме під цим гаслом вирішили об’єднатися у Спільноту
-                Незалежних Волонтерів</p>
-            <p>#HelpUkraine-CF — це спільнота незалежних, вправних і патріотично налаштованих людей. Коли наша Україна в
-                вогні не можемо стояти осторонь. </p>
-        </div>
-        <div class="main-photo">
-            <div class="textContainer">
-                <h1>305.600/</h1>
-                <h3>700.000 грн зібрано</h3>
+        <div class="container">
+            <a href="#"><img class="logo" src="./assets/logo.png"></a>
+            <div class="main-title">
+                <h1 class="help">Help</h1>
+                <h1 class="ukraine">Ukraine&nbsp</h1>
+                <h1>- CF</h1>
+                <a href="#Form">
+                    <button class="donate-block donate-button">Донат</button>
+                </a>
             </div>
-            <p>#700.000 грн на найкращі дрони для бійців з гарячих точок України</p>
-        </div>
+            <hr>
+            <div class="main-text" data-aos="fade-up" data-aos-duration="1000">
+                <span>Instagram</span>
+                <span>Facebook</span>
+                <p>«Береженого Бог береже, а козаків —волонтери» — саме під цим гаслом вирішили об’єднатися у Спільноту
+                    Незалежних Волонтерів</p>
+                <p>#HelpUkraine-CF — це спільнота незалежних, вправних і патріотично налаштованих людей. Коли наша
+                    Україна в
+                    вогні не можемо стояти осторонь. </p>
+            </div>
+            <div class="main-photo">
+                <div class="textContainer">
+                    <h1>3.500€/</h1>
+                    <h3>25.000€ зібрано</h3>
+                </div>
+                <p>#ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір — 3 дні. Треба 50 касок за 500
+                    євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
+            </div>
     </section>
 
     <section class="about">
-        <img src="./assets/Frame 273.png" class="lamp" id="lamp2">
-        <div class="container-title">
-            <h1>Про нас</h1>
-            <h5>“Не зволікаємо та оперативно реагуємо. Особисто знаємо кожного, хто приєднується до нашої спільноти і
-                запрошуємо до співпраці лише небайдужих та вправних в організації Швидкої допомоги”</h5>
-        </div>
-        <div class="container-content">
-            <p>Ми обʼєдналися навколо доброго імені ініціаторів нашої спільноти з однією метою: спільними зусиллями і
-                швидкими діями забезпечити Зброєні Сили України, Територіальну оборону і міські громади всім необхідним
-                у воєнний час.</p>
-            <img class="about-img" src="./assets/Rectangle 37.png">
-            <div class="documents">
-                <img src="./assets/document.png" alt="">
-                <div class="document-text">
-                    <h3>Виписка з Єдиного державного реєстру юридичних осіб, фізичних осіб-підприємців та громадських формувань</h3>
-                    <hr>
+        <div class="container">
+            <img src="./assets/Frame 273.png" class="lamp" id="lamp2" data-aos="zoom-in" data-aos-duration="2000">
+            <div class="container-title">
+                <h1>Про нас</h1>
+                <h5>“Не зволікаємо та оперативно реагуємо. Особисто знаємо кожного, хто приєднується до нашої спільноти
+                    і
+                    запрошуємо до співпраці лише небайдужих та вправних в організації Швидкої допомоги”</h5>
+            </div>
+            <div class="container-content">
+                <p>Ми обʼєдналися навколо доброго імені ініціаторів нашої спільноти з однією метою: спільними зусиллями
+                    і
+                    швидкими діями забезпечити Зброєні Сили України, Територіальну оборону і міські громади всім
+                    необхідним
+                    у воєнний час.</p>
+                <img class="about-img" src="./assets/Rectangle 37.png">
+                <div class="documents">
+                    <img src="./assets/document.png" alt="">
+                    <div class="document-text">
+                        <h3>Виписка з Єдиного державного реєстру юридичних осіб, фізичних осіб-підприємців та
+                            громадських
+                            формувань</h3>
+                        <hr>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="ways">
-        <div class="container-title">
-            <h1>Напрямки допомоги</h1>
-        </div>
-        <div class="container-content">
-            <p>Ми на зв‘язку з хлопцями та дівчатами на передовій, отримуємо конкретні запити від підрозділів на лініях
-                фронту, у гарячих точках. Обробляємо ці запити, знаходимо та закуповуємо необхідне по всьому світу.
-            </p>
-            <br>
-            <br>
-            <p>Маємо залучений на допомогу автопарк вантажівок з досвідченими водіями, які сміливо їдуть з доставкою у
-                місця поблизу лінії фронту.</p>
-            <div class="list">
-                <div class="list-item">
-                    <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 29.jpg);"></div>
-                    <h3>Транспортне забезпечення </h3>
-                    <p>Машини швидкої допомоги, пікапи, джипи, спеціалізовані пожежні автівки та ін.</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-item-img" style="background-image: url(./assets//Rectangle\ 28.png);"></div>
-                    <h3>Медичне забезпечення </h3>
-                    <p>Медичне обладнання, ліки, аптечки та ін.</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 30.png);"></div>
-                    <h3>Амуніція</h3>
-                    <p>Каски, бронежилети, спеціалізовані прилади</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 81.png);"></div>
-                    <h3>Одяг </h3>
-                    <p>Термобілизна, камуфляж, маскувальні сітки, взуття та ін.</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 82.png)"></div>
-                    <h3>Гуманітарна допомога </h3>
-                </div>
+        <div class="container">
+            <div class="container-title">
+                <h1>Напрямки допомоги</h1>
             </div>
-            <button class="donate-button ways-button">Донат</button>
+            <div class="container-content">
+                <p>Ми на зв‘язку з хлопцями та дівчатами на передовій, отримуємо конкретні запити від підрозділів на
+                    лініях
+                    фронту, у гарячих точках. Обробляємо ці запити, знаходимо та закуповуємо необхідне по всьому світу.
+                </p>
+                <br>
+                <br>
+                <p>Маємо залучений на допомогу автопарк вантажівок з досвідченими водіями, які сміливо їдуть з доставкою
+                    у
+                    місця поблизу лінії фронту.</p>
+                <div class="list">
+                    <div class="list-item">
+                        <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 29.jpg);"></div>
+                        <h3>Транспортне забезпечення </h3>
+                        <p>Машини швидкої допомоги, пікапи, джипи, спеціалізовані пожежні автівки та ін.</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img" style="background-image: url(./assets//Rectangle\ 28.png);"></div>
+                        <h3>Медичне забезпечення </h3>
+                        <p>Медичне обладнання, ліки, аптечки та ін.</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 30.png);"></div>
+                        <h3>Амуніція</h3>
+                        <p>Каски, бронежилети, спеціалізовані прилади</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 81.png);"></div>
+                        <h3>Одяг </h3>
+                        <p>Термобілизна, камуфляж, маскувальні сітки, взуття та ін.</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img" style="background-image: url(./assets/Rectangle\ 82.png)"></div>
+                        <h3>Гуманітарна допомога </h3>
+                    </div>
+                    <div class="list-button">
+                        <a href="#Form">
+                            <button class="donate-button ways-button">Донат</button>
+                        </a>
+                    </div>
+                </div>
+                <img src="./assets/Frame 273.png" class="lamp" id="lamp3" data-aos="zoom-in" data-aos-duration="2000">
+            </div>
         </div>
     </section>
-    <img src="./assets/Frame 275.png" class="lamp" id="lamp3">
 
 
     <section class="result">
-        <div class="container-title">
-            <h1>Результати</h1>
-        </div>
-        <div class="container-result">
-            <ul>
-                <li>
-                    <p>01.</p>
-                    <p class="result-title">Транспортне забезпечення</p>
-                    <p>+</p>
-                </li>
-                <li>
-                    <p>02.</p>
-                    <p class="result-title">Медичне забезпечення</p>
-                    <p>+</p>
-                </li>
-                <li>
-                    <p>03.</p>
-                    <p class="result-title">Амуніція</p>
-                    <p>+</p>
-                </li>
-                <li>
-                    <p>04.</p>
-                    <p class="result-title">Одяг</p>
-                    <p>+</p>
-                </li>
-                <li>
-                    <p>05.</p>
-                    <p class="result-title">Гуманітарна допомога</p>
-                    <p>+</p>
-                </li>
-            </ul>
+        <div class="container">
+            <div class="container-title">
+                <h1>Результати</h1>
+            </div>
+            <div class="container-result">
+                <ul>
+                    <li>
+                        <p>01.</p>
+                        <p class="result-title">Транспортне забезпечення</p>
+                        <p>+</p>
+                    </li>
+                    <li>
+                        <p>02.</p>
+                        <p class="result-title">Медичне забезпечення</p>
+                        <p>+</p>
+                    </li>
+                    <li>
+                        <p>03.</p>
+                        <p class="result-title">Амуніція</p>
+                        <p>+</p>
+                    </li>
+                    <li>
+                        <p>04.</p>
+                        <p class="result-title">Одяг</p>
+                        <p>+</p>
+                    </li>
+                    <li>
+                        <p>05.</p>
+                        <p class="result-title">Гуманітарна допомога</p>
+                        <p>+</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section class="alerts">
-        <div class="container-title">
-            <h1>Актуальне</h1>
+        <div class="container">
+            <div class="container-title">
+                <h1>Актуальне</h1>
+            </div>
+            <div class="container-alert">
+                <div class="alert">
+                    <img src="./assets/IMG_3521.png">
+                    <h3>01. Каски зразку НАТО</h3>
+                    <h5>30.04.22</h5>
+                    <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за
+                        500
+                        євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
+                </div>
+                <div class="alert">
+                    <img src="./assets/IMG_3521.png">
+                    <h3>01. Каски зразку НАТО</h3>
+                    <h5>30.04.22</h5>
+                    <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за
+                        500
+                        євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
+                </div>
+                <div class="alert">
+                    <img src="./assets/IMG_3521.png">
+                    <h3>01. Каски зразку НАТО</h3>
+                    <h5>30.04.22</h5>
+                    <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за
+                        500
+                        євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
+                </div>
+                <div class="alert">
+                    <img src="./assets/IMG_3521.png">
+                    <h3>01. Каски зразку НАТО</h3>
+                    <h5>30.04.22</h5>
+                    <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за
+                        500
+                        євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
+                </div>
+            </div>
         </div>
-        <div class="container-alert">
-            <div class="alert">
-                <img src="./assets/IMG_3521.png">
-                <h3>01. Каски зразку НАТО</h3>
-                <h5>30.04.22</h5>
-                <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за 500 євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
-            </div>
-            <div class="alert">
-                <img src="./assets/IMG_3521.png">
-                <h3>01. Каски зразку НАТО</h3>
-                <h5>30.04.22</h5>
-                <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за 500 євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
-            </div>
-            <div class="alert">
-                <img src="./assets/IMG_3521.png">
-                <h3>01. Каски зразку НАТО</h3>
-                <h5>30.04.22</h5>
-                <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за 500 євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
-            </div>
-            <div class="alert">
-                <img src="./assets/IMG_3521.png">
-                <h3>01. Каски зразку НАТО</h3>
-                <h5>30.04.22</h5>
-                <p>ТЕРМІНОВО! Знайшли та поставили на резерв каски зразку НАТО. На збір – 3 дні. Треба 50 касок за 500 євро кожна. Всього потрібно зібрати: 25 000 €. Після покупки — відзвітуємо</p>
-            </div>
-        </div>
+        <img src="./assets/Frame 277.png" class="lamp" id="lamp4" data-aos="zoom-in" data-aos-duration="2000">
     </section>
 
-    <section class="form">
-        <h1>#Волонтерському роду —</h1>
-        <h2>нема переводу!</h2>
-        <p>Кожен день наші сміливі Українці і Українки боронять нашу землю і Незалежність Рідної землі, ризикуючи своїм життям. Допоможемо їм робити святу справу та наблизимо спільними зусиллями Перемогу України! </p>
-        <nav>
-            <button class="privat"></button>
-            <button class="recvisit"></button>
-        </nav>
+    <section class="form" id="Form">
+        <div class="container">
+            <h1>#Волонтерському роду —</h1>
+            <h2>нема переводу!</h2>
+            <p>Кожен день наші сміливі Українці і Українки боронять нашу землю і Незалежність Рідної землі, ризикуючи
+                своїм
+                життям. Допоможемо їм робити святу справу та наблизимо спільними зусиллями Перемогу України! </p>
+            <nav>
+                <button class="privat">Приват 24</button>
+                <button class="recvisit">Реквізити</button>
+            </nav>
+        </div>
     </section>
 
     <footer>
@@ -217,11 +257,12 @@
 
 
 
-    <img src="./assets/Frame 272.png" class="lamp" id="lamp1">
+    <img src="./assets/Frame 272.png" class="lamp" id="lamp1" data-aos="zoom-in" data-aos-duration="2000">
     <!-- <div class="cursor"></div>
     <div class="cursor2"></div> -->
     <script>
         ChangeHash();
+        AOS.init();
 
         // var cursor = document.querySelector(".cursor");
         // var cursor2 = document.querySelector(".cursor2");

@@ -14,6 +14,7 @@ html{
 	color: #171717;
 	scroll-behavior: smooth;
 	line-height: 1.2;
+	overflow-x: hidden;
 }
 
 
@@ -26,13 +27,28 @@ a{
 	color: inherit;
 	cursor: pointer;
 }
+button:hover{
+	background-color: #fffd83;
+	color: #0D3EBC;
+	transition: 300ms;
+}
+
+button:focus{
+	background-color: #fffff1;
+	transition: 300ms;
+}
 
 
 section{
-	width: 1200px;
-	margin: 0px auto;
+	width: 100%;
 	min-height: 80px;
 	position: relative;
+}
+.container{
+	width: 1200px;
+	margin: 0px auto;
+	position: relative;
+	height: 100%;
 }
 
 .lamp{
@@ -46,13 +62,18 @@ section{
 }
 #lamp2{
 	width: 594px;
-	top: 0px;
+	top: -190px;
 	left: -16%;
 }
 #lamp3{
-	width: 594px;
-	right: 0;
-	margin-top: -200px;
+	width: 584px;
+	right: -250px;
+	bottom: -200px;
+}
+#lamp4{
+	width: 100%;
+	left: 0px;
+	top: -35%;
 }
 /* .cursor{
 	position: fixed;
@@ -332,7 +353,7 @@ header nav li:last-child{
 	z-index: 1000;
 }
 .main-title a{
-	float: left;
+	float: right;
 }
 .main-title h1{
 	font-family: 'Kharkiv Tone Regular', sans-serif;
@@ -365,6 +386,7 @@ header nav li:last-child{
 	color: white;
 	cursor: pointer;
 	transition: 400ms;
+	z-index: 100;
 }
 .donate{
 	position: absolute;
@@ -501,6 +523,7 @@ header nav li:last-child{
 .container-content{
 	width: 740px;
 	height: 100%;
+	position: relative;
 	margin-left: 60px;
 	float: left;
 }
@@ -536,11 +559,16 @@ header nav li:last-child{
 	margin-top: 5px;
 	color: #858585;
 }
+.list-button{
+	position: relative;
+	transition: 400ms;
+}
 
 .ways-button{
 	position: absolute;
-	right: 50px;
-	bottom: -50px;
+	left: 57px;
+	bottom: 79px;
+	transition: 400ms;
 }
 
 
@@ -691,6 +719,7 @@ header nav li:last-child{
 
 .form{
 	padding-top: 190px;
+	z-index: 1;
 }
 
 .form h1{
@@ -715,6 +744,28 @@ header nav li:last-child{
 	font-size: 18px;
 	font-weight: 400;
 }
+.form button{
+	margin-top: 40px;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border: none;
+	padding: 14px 75px;
+	border-radius: 24px;
+	border: 2px solid #0D3EBC;
+	cursor: pointer;
+	transition: 400ms;
+}
+.privat{
+	background-color: #0D3EBC;
+	color: white;
+}
+.recvisit{
+	margin-left: 34px;
+	color: #0D3EBC;
+	background-color: #0042e900;
+}
 
 
 
@@ -725,10 +776,15 @@ header nav li:last-child{
 
 footer{
 	width: 100%;
-	height: 600px;
+	height: 569px;
 	margin-top: 480px;
 	background-color: #0D3EBC;
 }
+
+
+
+
+
 
 
 
