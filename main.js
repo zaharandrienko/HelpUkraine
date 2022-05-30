@@ -7,10 +7,14 @@ const item = document.getElementsByClassName('team-about-item')
 const red = document.getElementsByClassName('red')
 const green = document.getElementsByClassName('green')
 const teamAbout = document.getElementsByClassName('team-about')
+const snake = document.getElementsByClassName('snake2')
+const yellow = document.getElementsByClassName('circul')
+const notYellow = document.getElementsByClassName('elips')
 
 
 
 const allLang = ['en', 'ua'];
+const allHash = ['en', 'ua', 'About','Form'];
 var teamInd = 1;
 var teamIndMobile = 0;
 var menuInd = true;
@@ -24,18 +28,45 @@ function ChangeHash(){
     let hash = window.location.hash;
     hash = hash.substr(1);
 
-    if(!allLang.includes(hash)){
-        location.href = window.location.pathname + '#en';
+    if(!allHash.includes(hash)){
+        location.href = window.location.pathname + '#ua';
         location.reload();
+    }
+    if(allHash.includes(hash)){
+        setTimeout(
+            function AllHash(){
+                if(!allLang.includes(hash)){
+                    ChangeLanguage(ua)
+                    pageXOffset = pageXOffset + 1000
+                    location.reload();
+                    
+                }
+            }
+        , 1000);
     }
 
     document.querySelector('#ind-' + hash).classList.add('active')
-    // document.querySelector('#' + hesh).classList.add('active')
 
 
-    // for(let key in textArr)(
-    //     document.querySelector('.lang-'+key).innerHTML = textArr[key][hash]
-    // )
+    for(let key in textArr)(
+        document.querySelector('.lang-'+key).innerHTML = textArr[key][hash]
+    )
+    if(hash == 'en'){
+        snake[1].classList.add('snake-none')
+        snake[0].classList.remove('snake-none')
+        yellow[1].classList.add('snake-none')
+        yellow[0].classList.remove('snake-none')
+        notYellow[1].classList.add('snake-none')
+        notYellow[0].classList.remove('snake-none')
+    }
+    else{
+        snake[0].classList.add('snake-none')
+        snake[1].classList.remove('snake-none')
+        yellow[0].classList.add('snake-none')
+        yellow[1].classList.remove('snake-none')
+        notYellow[0].classList.add('snake-none')
+        notYellow[1].classList.remove('snake-none')
+    }
 }
 
 
@@ -146,7 +177,6 @@ function Team(x){
 function Menu(){
     var nav = document.querySelector('#Menu')
     
-    console.log(menuInd)
 
     if(menuInd === true){
         nav.classList.add('menu-open')
